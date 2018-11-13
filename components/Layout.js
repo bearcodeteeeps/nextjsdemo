@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import { Container } from 'reactstrap'
+import { Container, Row, Col } from 'reactstrap'
 
 import Header from './Header';
 
@@ -12,7 +12,11 @@ const Layout = (props) => (
     </Head>
     <Header />
     <Container>
+      <Row style={{marginTop: '20px'}}>
+        <Col>
       {props.children}
+        </Col>
+      </Row>
     </Container>
   </div>
 );

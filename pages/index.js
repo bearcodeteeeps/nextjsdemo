@@ -5,9 +5,9 @@ import Layout from '../components/Layout.js'
 
 function getPosts () {
   return [
-    { id: 'hello-nextjs', title: 'Hello Next.js'},
-    { id: 'learn-nextjs', title: 'Learn Next.js is awesome'},
-    { id: 'deploy-nextjs', title: 'Deploy apps with ZEIT'},
+    { id: 'breweries', title: 'New Breweries to Try'},
+    { id: 'beard', title: 'Awesome Beards'},
+    { id: 'tacos', title: 'Awesome Tacos'},
   ]
 }
 
