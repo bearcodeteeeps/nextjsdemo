@@ -5,15 +5,15 @@ import Layout from '../components/Layout.js'
 
 function getPosts () {
   return [
-    { id: 'breweries', title: 'New Breweries to Try'},
-    { id: 'beard', title: 'Awesome Beards'},
-    { id: 'tacos', title: 'Awesome Tacos'},
+    { id: 'breweries', title: 'New Breweries to Try', content: 'New Belgium, Left Hand'},
+    { id: 'beard', title: 'Awesome Beards', content: 'Beards'},
+    { id: 'tacos', title: 'Awesome Tacos', content: 'Tacos'},
   ]
 }
 
 const PostLink = ({ post }) => (
   <li>
-    <Link as={`/p/${post.id}`} href={`/post?title=${post.title}`}>
+    <Link as={`/p/${post.id}?title=${post.title}&content=${post.content}`} href={`/post?title=${post.title}&content=${post.content}`}>
       <a>{post.title}</a>
     </Link>
     <style jsx>{`
