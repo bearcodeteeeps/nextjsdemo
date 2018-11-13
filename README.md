@@ -35,7 +35,7 @@ npm run dev
 * [NextJS](https://nextjs.org/docs/)
 * [React](https://reactjs.org/docs/getting-started.html)
 * [npm](https://docs.npmjs.com/)
-* [Material-UI](https://material-ui.com/getting-started/installation/)
+* [Reactstrap](https://reactstrap.github.io/)
 
 
 ## Authors
