@@ -8,8 +8,9 @@ import {
   NavItem,
   NavLink
 } from 'reactstrap';
+import {withRouter} from "next/dist/lib/router";
 
-export default class Example extends React.Component {
+class Example extends React.Component {
   constructor(props) {
     super(props);
 
@@ -19,6 +20,7 @@ export default class Example extends React.Component {
   }
 
   toggle = () => {
+    console.log(this.props)
     this.setState({
       isOpen: !this.state.isOpen
     });
@@ -33,13 +35,13 @@ export default class Example extends React.Component {
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <NavLink href="/">Home</NavLink>
+                <NavLink active={this.props.router.pathname === "/"} href="/">Home</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="/about">About</NavLink>
+                <NavLink active={this.props.router.pathname === "/about"} href="/about">About</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="/contact">Contact</NavLink>
+                <NavLink active={this.props.router.pathname === "/contact"} href="/contact">Contact</NavLink>
               </NavItem>
             </Nav>
           </Collapse>
@@ -48,3 +50,5 @@ export default class Example extends React.Component {
     );
   }
 }
+
+export default withRouter(Example);
