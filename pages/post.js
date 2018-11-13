@@ -16,7 +16,7 @@ And we can have a title as well.
 And here's the content.
      `}/>
     </div>
-    <style jsx global>{`
+    <style jsx>{`
      .markdown {
        font-family: 'Arial';
      }

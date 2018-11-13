@@ -1,15 +1,19 @@
-import Header from './Header'
+import Head from 'next/head';
+import { Container } from 'reactstrap'
 
-const layoutStyle = {
-  margin: 20,
-  padding: 20,
-  border: '1px solid #DDD'
-};
+import Header from './Header';
 
 const Layout = (props) => (
-  <div style={layoutStyle}>
+  <div>
+    <Head>
+      <title>Welcome to my blog</title>
+      <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossOrigin="anonymous" />
+    </Head>
     <Header />
-    {props.children}
+    <Container>
+      {props.children}
+    </Container>
   </div>
 );
 

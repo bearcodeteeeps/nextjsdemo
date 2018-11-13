@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import Head from 'next/head'
 
 import Layout from '../components/Layout.js'
 
@@ -38,10 +37,6 @@ const PostLink = ({ post }) => (
 
 export default () => (
   <div>
-    <Head>
-      <title>Welcome to my blog</title>
-      <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-    </Head>
     <Layout>
       <h1>My Blog</h1>
       <ul>
